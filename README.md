@@ -11,3 +11,7 @@ mkdir /bash & git clone https://github.com/williamdunbar/bash.git /bash
 ```
 chmod +x /bash/*.sh
 ```
+## Edit crontab
+```
+EDITOR=nano crontab -e
+```
