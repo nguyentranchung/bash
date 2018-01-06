@@ -1,1 +1,4 @@
+EDITOR=nano crontab -e
+
 0 2 * * * /bash/backup.sh > /dev/null 2>&1
+30 2 * * * /opt/letsencrypt/letsencrypt-auto renew --pre-hook "service nginx stop" --post-hook "service nginx start" >> /var/log/le-renew.log
