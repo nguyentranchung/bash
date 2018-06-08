@@ -1,6 +1,6 @@
 #!/bin/bash
 curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | tee /etc/yum.repos.d/yarn.repo
-yum install nano composer git nodejs libpng* -y
+yum install nano composer git nodejs libpng* yarn -y
 
 # Rclone
 curl https://rclone.org/install.sh | sudo bash
@@ -10,3 +10,11 @@ git clone https://github.com/letsencrypt/letsencrypt /opt/letsencrypt
 service nginx stop
 cd /opt/letsencrypt
 ./letsencrypt-auto certonly --standalone
+
+cd /home/chungnguyen.xyz/public_html
+rm -f index.html
+git clone https://yumi056:kingofhero0A@bitbucket.org/yumi056/laravelcms.git .
+composer install
+yarn install
+npm run prod
+php artisan key:generate
