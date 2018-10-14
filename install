@@ -13,7 +13,7 @@ cd /opt/letsencrypt
 
 cd /home/chungnguyen.xyz/public_html
 rm -f index.html
-git clone https://yumi056:kingofhero0A@bitbucket.org/yumi056/laravelcms.git .
+git clone https://yumi056@bitbucket.org/yumi056/laravelcms.git .
 composer install
 yarn install
 npm run prod
